@@ -15,7 +15,9 @@
     "test:run": "karma run",
     "lint": "eslint --cache .",
     "lint:unix": "eslint --cache . --format unix",
-    "lint:ci": "eslint --cache . --format junit"
+    "lint:ci": "eslint --cache . --format junit",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -58,7 +60,8 @@
     "underscore": "^1.8.3",
     "unlazy-loader": "^0.1.2",
     "vgl": "^0.3.10",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-plugin-istanbul": "^3.0.0",
@@ -83,5 +86,6 @@
     "karma-webpack": "^1.8.0",
     "mocha": "^3.2.0",
     "sinon": "^2.1.0"
-  }
+  },
+  "snyk": true
 }
